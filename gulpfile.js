@@ -5,8 +5,8 @@ global.$ = {
   config: require('./gulp/config'),
   path: {
     task: require('./gulp/paths/tasks.js'),
-    jsFoundation: require('./gulp/paths/js.libs.js'),
-    cssFoundation: require('./gulp/paths/css.libs.js'),
+    jsLibs: require('./gulp/paths/js.libs.js'),
+    cssLibs: require('./gulp/paths/css.libs.js'),
     app: require('./gulp/paths/app.js')
   },
   gulp: require('gulp'),
@@ -38,6 +38,6 @@ $.gulp.task('default', $.gulp.series(
     ),
     $.gulp.parallel(
         'watch',
-        'serve'
+        'server'
     )
 ));
