@@ -1,10 +1,11 @@
 {
-  "name": "portfolio__sergey_gladkikh",
+  "name": "portfolio_sergey_gladkikh",
   "version": "1.0.0",
   "description": "Адаптивное портфолио веб-разработчика Гладких Сергея",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp build",
+    "start": "npm run build && gulp server"
   },
   "repository": {
     "type": "git",
@@ -26,14 +27,19 @@
   },
   "homepage": "https://github.com/SergeyGladkikh24/portfolio#readme",
   "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "babel-preset-env": "^1.7.0",
     "browser-sync": "^2.26.3",
+    "del": "^3.0.0",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "^8.0.0",
     "gulp-cheerio": "^0.6.3",
     "gulp-concat": "^2.6.1",
     "gulp-concat-css": "^3.1.0",
     "gulp-csso": "^3.0.1",
     "gulp-eslint": "^5.0.0",
+    "gulp-imagemin": "^5.0.3",
     "gulp-load-plugins": "^1.5.0",
     "gulp-notify": "^3.2.0",
     "gulp-pug": "^4.0.1",

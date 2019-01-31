@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function() {
-  $.gulp.task('server', function() {
+  $.gulp.task('serve', async function() {
     $.browserSync.init({
       open: false,
       server: $.config.root
