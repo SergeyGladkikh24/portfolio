@@ -33,11 +33,12 @@ $.gulp.task('default', $.gulp.series(
         'js:process',
         'copy:image',
         'copy:fonts',
+        'copy:media',
         'css:libs',
-        'sprite:svg'
+        'sprite:svg',
     ),
     $.gulp.parallel(
         'watch',
         'serve'
-    ),
+    )
 ));

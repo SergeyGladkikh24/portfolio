@@ -1,5 +1,6 @@
 'use strict';
 
 module.exports = [
-  './source/js/script.js'
+  './source/js/parallax.js',
+  './source/js/preloader.js'
 ];

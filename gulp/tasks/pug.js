@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function() {
-  $.gulp.task('pug', async function() {
+  $.gulp.task('pug', function() {
     return $.gulp.src('./source/pug/pages/*.pug')
       .pipe($.gp.pug({ pretty: true }))
       .on('error', $.gp.notify.onError(function(error) {

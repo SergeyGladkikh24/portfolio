@@ -1,0 +1,46 @@
+.parallax {
+    display: none;
+}
+
+@include tablet {
+
+	.parallax {
+		display:block;
+		position: fixed;
+    	top: 0;
+    	left: 0;
+    	width: 100%;
+        height: 100%;
+        z-index: -1;
+	}
+
+	.parallax__layer {
+		position: fixed;
+    	bottom: 0;
+    	top: 6%;
+        left: -1%;
+        width: 102%;
+        height: 100%;
+    	z-index: -1;
+    	will-change: transform;
+	}
+
+	.parallax__image {
+		position: absolute;
+    	bottom: 0;
+    	left: 50%;
+    	transform: translateX(-50%);
+	    width: 100%;
+	    height:240px;
+	}
+}
+
+@include desktop {
+    .parallax__layer {
+        top: 10%;
+    }
+
+	.parallax__image {
+		height: 320px;
+	}
+}

@@ -1,0 +1,52 @@
+.welcome__wrapper {
+  width: 300px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0 auto;
+  padding-top: 21px;
+  transform: translate(0,0);
+}
+
+.welcome__info {
+	padding-top: 39px;
+	padding-bottom: 35px;
+	background-color: rgba(28,31,41,0.5);
+}
+
+.welcome__nav-wrapper {
+	display: flex;
+}
+
+.welcome__nav-link {
+	display: block;
+	color:$white;
+  	background-color: $blue;
+  	padding: 11px 10px 9px;
+  	text-align: center;
+  	font-size: 16px;
+	line-height: 24px;
+  	font-weight: 600;
+  	width: 100%;
+    box-sizing: border-box;
+
+    &:first-child {
+    	border-right: 2px solid rgba(255,255,255,0.5);
+    }
+	
+	&:hover {
+		background-color: $blueHover;
+	}
+}
+
+@include tablet {
+	.welcome__wrapper {
+	  width: 350px;
+	}
+}
+
+@include desktop {
+	.welcome__wrapper {
+	  width: 380px;
+	  padding-top: 30px;
+	}
+}

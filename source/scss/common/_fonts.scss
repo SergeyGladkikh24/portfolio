@@ -1,0 +1,44 @@
+@font-face {
+	$name: 'Roboto';
+	$weight: 400;
+	$style: normal;
+	$url:'../fonts/Roboto-Regular';
+
+	@include font($name,$weight,$style,$url);
+}
+
+@font-face {
+	$name: 'Roboto';
+	$weight: 600;
+	$style: normal;
+	$url:'../fonts/Roboto-Medium';
+
+	@include font($name,$weight,$style,$url);
+}
+
+@font-face {
+	$name: 'Roboto';
+	$weight: 300;
+	$style: normal;
+	$url:'../fonts/Roboto-Light';
+
+	@include font($name,$weight,$style,$url);
+}
+
+@font-face {
+	$name: 'Roboto';
+	$weight: 400;
+	$style: italic;
+	$url:'../fonts/Roboto-Italic';
+
+	@include font($name,$weight,$style,$url);
+}
+
+@font-face {
+	$name: 'sansus_webissimoregular';
+	$weight: 400;
+	$style: normal;
+	$url:'../fonts/sansus-webissimo-regular-webfont';
+
+	@include font($name,$weight,$style,$url);
+}

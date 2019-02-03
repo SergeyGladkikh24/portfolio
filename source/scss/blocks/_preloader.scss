@@ -1,0 +1,91 @@
+.preloader {
+	align-items: center;
+	justify-content: center;
+  display: flex;
+  height:100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background-color: #223b65;
+  background-image: url("../img/night_prel_bg.jpg");
+  background-size: cover;
+}
+
+.preloader__caption {
+   margin: 0 auto;
+}
+
+.preloader__loader-figures {
+	width: 25px;
+  height: 25px;
+  margin: 0 auto;
+  position: relative;
+  transform: rotateZ(45deg);
+}
+
+.preloader__figure-item {
+	position: relative;
+  transform: rotateZ(45deg);
+  width: 50%;
+  height: 50%;
+  float: left;
+  transform: scale(1.1);
+
+  &::before {
+  	content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    animation: cube-loader 2.76s infinite linear both;
+    transform-origin: 100% 100%;
+  }
+
+  &--two {
+  	transform: scale(1.1) rotateZ(90deg);
+
+  	&::before {
+  		animation-delay: 0.35s;
+  	}
+  }
+
+  &--three {
+  	transform: scale(1.1) rotateZ(180deg);
+
+  	&::before {
+  		animation-delay: 0.69s;
+  	}
+  }
+
+  &--four {
+  	transform: scale(1.1) rotateZ(270deg);
+
+  	&::before {
+  		animation-delay: 1.04s;
+  	}
+  }
+}
+
+@keyframes cube-loader {
+
+  0%, 10% {
+    transform: perspective(136px) rotateX(-180deg);
+    opacity: 0;
+  }
+
+  25%, 75% {
+    transform: perspective(136px) rotateX(0deg);
+    opacity: 1;
+  }
+
+  90%, 100% {
+    transform: perspective(136px) rotateY(180deg);
+    opacity: 0;
+  }  
+}

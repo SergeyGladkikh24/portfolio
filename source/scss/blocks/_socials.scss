@@ -1,0 +1,31 @@
+.socials__wrapper {
+	width: 138px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.socials__link-svg {
+	fill:$blue;
+
+	&:hover {
+		fill: $blueHover;
+	}
+
+	&--vk {
+		width: 31px;
+    	height: 17px;
+	}
+
+	&--gh {
+		width: 26px;
+    	height: 22px;
+    	padding-top: 4px;
+	}
+
+	&--in {
+		width: 24px;
+    	height: 22px;
+	}
+}

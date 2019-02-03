@@ -1,1 +1,15 @@
-h1 Привет
+extends ../template
+
+block title
+  title Welcome to my portfolio website!
+
+block content
+  main.index-main
+   .index-main__wrapper
+    .index-main__wrapper-video
+     video.index-main__video(autoplay loop muted width="100%" height="auto")
+      source(class="index-main__video-source" src="media/night.mp4" type="video/mp4")
+      source(class="index-main__video-source" src="media/night.webm" type="video/webm") 
+    include ../modules/parallax
+    include ../modules/welcome
+    include ../modules/copyright

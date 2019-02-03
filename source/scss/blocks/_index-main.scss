@@ -1,0 +1,45 @@
+.index-main__wrapper {
+  background-color: #223b65;
+  background: url("../img/index-bg-1800.jpg") no-repeat center/cover;
+  position: relative;
+  z-index: 0;
+}
+
+.index-main__wrapper-video {
+  display: none;
+}
+
+@include tablet {
+  .index-main__wrapper-video {
+    display: block;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+    position: fixed;
+    z-index: -1;
+    overflow: hidden;
+  }
+
+  .index-main__video {
+    position: absolute;
+    top:0;
+    left:0;
+    min-width: 100%;
+    min-height:100%;
+    width: auto;
+    height: auto;
+    margin-left: -6px;
+  }
+
+  @supports (object-fit:cover) {
+    .index-main__video {
+      position: absolute;
+      top:0;
+      left:0;
+      width: 101%;
+      height:100%;
+      object-fit:cover
+    }
+  }
+}

@@ -1,8 +1,8 @@
 'use strict';
 
 module.exports = function() {
-    $.gulp.task('sprite-gif', async function() {
-        return $.gulp.src('./source/img/sprite/*.gif')
+    $.gulp.task('sprite-gif', function() {
+        return $.gulp.src('./source/img/*.gif')
             .pipe($.gp.spritesmith({
                 imgName: 'sprite.gif',
                 cssName: 'sprite-gif.css'

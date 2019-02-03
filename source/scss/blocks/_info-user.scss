@@ -1,0 +1,33 @@
+.info-user__avatar {
+	width: 141px;
+	height: 141px;
+	margin:0 auto;
+	margin-bottom: 24px;
+	border-radius:50%;
+	overflow:hidden;
+}
+
+.info-user__avatar-img {
+	border-radius: 50%;
+	width: 141px;
+	height: 141px;
+	border:3px solid $white;
+	box-sizing: border-box;
+}
+
+.info-user__name {
+	text-align: center;
+    font-size: 23px;
+    line-height: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.info-user__description {
+	text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    opacity: 0.8;
+    margin-bottom: 20px;
+    font-weight: 600;
+}

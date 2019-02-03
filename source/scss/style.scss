@@ -1,3 +1,11 @@
-body {
-	overflow-x: hidden;
-}
+@import 'common/_variables.scss';
+@import 'common/_mixins';
+@import 'common/_fonts';
+@import 'common/_base';
+@import 'blocks/_preloader';
+@import 'blocks/_index-main';
+@import 'blocks/_parallax';
+@import 'blocks/_welcome';
+@import 'blocks/_info-user';
+@import 'blocks/_socials';
+@import 'blocks/_copyright';
