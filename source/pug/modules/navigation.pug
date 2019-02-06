@@ -1,0 +1,25 @@
+include ../mixins/navigation
+block variables
+ - 
+  var pages = [
+   {
+    id: 0,
+    title: "Главная",
+    url: "/"
+   },
+   {
+    id: 1,
+    title: "Мои работы",
+    url: "/works"
+   },
+   {
+    id: 2,
+    title: "Обо мне",
+    url: "/about"
+   }
+  ]
+
+ 
+ul.navigation
+ each item in pages
+  +navigation(item["id"],item["title"],item['url'],currentNav)

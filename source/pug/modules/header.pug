@@ -1,0 +1,15 @@
+header.header
+  .header__wrapper
+   .header__socials
+    include ./socials
+   button.header__hamburger-button(type="button")
+    span.header__hamburger-line 
+    span.header__hamburger-line
+    span.header__hamburger-line
+   .header__info-user
+    include ./info-user
+   a.header__button-down(href="#")
+    svg.header__arrow-icon
+     use(xlink:href ='#arrow_down' width="30" height="25")
+   nav.header__menu
+    include ./navigation.pug

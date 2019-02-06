@@ -10,6 +10,8 @@ global.$ = {
     app: require('./gulp/paths/app.js')
   },
   gulp: require('gulp'),
+  posthtml: require('gulp-posthtml'),
+  include: require('posthtml-include'),
   del: require('del'),
   babel: require('gulp-babel'),
   browserSync: require('browser-sync').create(),
@@ -27,15 +29,16 @@ $.gulp.task('default', $.gulp.series(
         'sprite-png'
     ),
     $.gulp.parallel(
-        'sass',
         'pug',
+        'sass',
         'js:libs',
         'js:process',
         'copy:image',
+        'copy:svg',
         'copy:fonts',
         'copy:media',
         'css:libs',
-        'sprite:svg',
+        'sprite:svg'
     ),
     $.gulp.parallel(
         'watch',

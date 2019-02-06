@@ -1,0 +1,99 @@
+block variables
+ - 
+  var content = [
+   {
+    id:0,
+    nameSite: "Магазин спортивного питания для котов CAT ENERGY",
+    description: "HTML,SCSS,PUG,GULP,SVG Javascript",
+    urlSite: "https://sergeygladkikh24.github.io/cat-energy/"
+   },
+   {
+    id:1,
+    nameSite: "Барбершоп Бородинский",
+    description: "HTML,CSS,Javascript,SVG",
+    urlSite: "https://github.com/SergeyGladkikh24/barbershop"
+   },
+   {
+    id:2,
+    nameSite: "Интернет магазин гаджетов DEVICE",
+    description: "HTML,CSS,Javascript,SVG",
+    urlSite: "https://sergeygladkikh24.github.io/Device/"
+   },
+   {
+    id:3,
+    nameSite: "Верстка сайта с красивой темой LUCID",
+    description: "HTML,CSS,BOOTSTRAP,Javascript,Jquery",
+    urlSite: "https://sergeygladkikh24.github.io/lucid/"
+   },
+   {
+    id:4,
+    nameSite: "Сайт о кино КИНОМОНСТР",
+    description: "HTML,CSS,BOOTSTRAP,PHP,MySQL,CODELGNITER",
+    urlSite: "#"
+   },
+   {
+    id:5,
+    nameSite: "Простая HTML страница.Демонстрация возможностей СSS Grid",
+    description: "HTML,CSS,CSS Grid",
+    urlSite: "https://sergeygladkikh24.github.io/testingGrid/"
+   },
+   {
+    id:6,
+    nameSite: "Учебная верстка.Сайт веб-студии GOLDEN",
+    description: "HTML,CSS,CSS Grid",
+    urlSite: "https://sergeygladkikh24.github.io/golden/"
+   }
+  ]
+
+ - 
+  var images = [
+   {
+    id:0,
+    url:"img/catenergy-preview.jpg"
+   },
+   {
+    id:1,
+    url:"img/barbershop__preview.jpg"
+   },
+   {
+    id:2,
+    url:"img/device-preview.jpg"
+   },
+   {
+    id:3,
+    url:"img/lucid-preview.jpg"
+   },
+   {
+    id:4,
+    url:"img/kinomonster-preview.jpg"
+   },
+   {
+    id:5,
+    url:"img/grid-preview.jpg"
+   },
+   {
+    id:6,
+    url:"img/golden-preview.jpg"
+   }
+  ]
+
+article.my-works
+ .my-works__wrapper
+  ul.my-works__previews-images
+   each item in images
+    li.my-works__preview-image-item(data-id = item["id"])
+     img.my-works__image(src = item["url"] alt = "Изображение " + item["id"] + " сайта")
+  ul.my-works__block-content
+   each item in content
+    li.my-works__content-item(data-id = item["id"])
+     h3.my-works__content-title=item["nameSite"]
+     p.my-works__content-description=item["description"]
+     .my-works__links-wrapper
+      a.my-works__link-on-site(href=item["urlSite"]) Посмотреть сайт
+       svg.my-works__link-icon(width = "20" height = "20")
+        use(xlink:href='#link' viewBox="0 0 26 22")
+     .my-works__buttons-wrapper
+      button.my-works__button-control.my-works__button-control--prev 
+       span.visually-hidden Назад
+      button.my-works__button-control.my-works__button-control--next
+       span.visually-hidden Вперед

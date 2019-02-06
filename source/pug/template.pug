@@ -1,3 +1,5 @@
+block variables
+
 doctype html
 html(lang='ru')
     head
@@ -20,6 +22,9 @@ html(lang='ru')
         <![endif]-->
 
     body
+        <div style="display: none;">
+            <include src="build/svg/sprite.svg"></include>
+        </div>
         include modules/preloader
         block content
         block scripts

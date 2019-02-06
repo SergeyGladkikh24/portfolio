@@ -1,0 +1,92 @@
+extends ../template
+
+block title
+    title Мои работы
+block content
+  
+  block variables
+   - var currentNav = 1;
+
+  include ../modules/header
+  include ../modules/portfolio
+
+
+  //- +header('info__name', 'Владимир Астахов', 'Личный сайт веб разработчика')
+  //-   section.works
+  //-       .works__triangle
+  //-           svg.works__triangle-icon(xmlns="http://www.w3.org/2000/svg", viewbox='0 0 1000 85', preserveAspectRatio="none")
+  //-               polygon.works__triangle_left(fill="#0d1120" fill-opacity='.85' points="0,0 0,86 500.8,86 500.8,75.5" )
+  //-               polygon.works__triangle_right( fill="#0d1120" fill-opacity='.85' points="1000,0 1000,86 500,86 500,75.5" )
+  //-           .works__title
+  //-               h2.works__title-text МОИ РАБОТЫ
+  //-       .slider
+  //-           .slider-info
+  //-               .slider-info__container
+  //-                   .slider-info__title
+  //-                       h2.block-subtitle САЙТ ШКОЛЫ ОНЛАЙН ОБРАЗОВАНИЯ
+  //-                   .slider-info__text
+  //-                       p
+  //-                           span HTML, CSS, JAVASCRIPT
+  //-                   a.slider-info__link(href='#')
+  //-                       i(class='fa fa-link slider-info__link-icon' aria-hidden='true')
+  //-                       span.slider-info__link-text Посмотреть сайт
+  //-                       //todo: нужно будет сделать список, когда буду делать слайдер
+  //-           .slider-img
+  //-               .slider-img__container
+  //-           .slider-nav
+  //-               .slider-nav__container
+  //-                   a.slider-nav__btn(href='#')
+  //-                       svg.slider-nav__down-icon
+  //-                           use(xlink:href=require('../../images/icons/sprite.svg') + '#portf_arrow_down')
+  //-                   ul.slider-nav__list.slider-nav__list_left
+  //-                       li.slider-nav__item.slider-nav__item_1
+  //-                       li.slider-nav__item.slider-nav__item_2
+  //-                       li.slider-nav__item.slider-nav__item_3
+  //-                       li.slider-nav__item.slider-nav__item_4
+  //-               .slider-nav__container
+  //-                   a.slider-nav__btn(href='#')
+  //-                       svg.slider-nav__up-icon
+  //-                           use(xlink:href=require('../../images/icons/sprite.svg') + '#portf_arrow_up')
+  //-                   ul.slider-nav__list.slider-nav__list_right
+  //-                       li.slider-nav__item.slider-nav__item_1
+  //-                       li.slider-nav__item.slider-nav__item_2
+  //-                       li.slider-nav__item.slider-nav__item_3
+  //-                       li.slider-nav__item.slider-nav__item_4
+  //-   section.about-me
+  //-       .about-me__title
+  //-           h2.about-me__title-text ЧТО ОБО МНЕ ГОВОРЯТ
+  //-       .about-me__comments
+  //-           ul.comments-list
+  //-               li.comments-list__item
+  //-                   .comments-list__container-img
+  //-                       img.comments-list__img(src=require('../../images/koval.jpg'))
+  //-                   .comments-list__text
+  //-                       p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+  //-                       span.comments-list__text-name Ковальчук Дмитрий
+  //-                       span.comments-list__text-position — основатель Loftschool
+  //-               li.comments-list__item
+  //-                   .comments-list__container-img
+  //-                       img.comments-list__img(src=require('../../images/sabancev.jpg'))
+  //-                   .comments-list__text
+  //-                       p Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+  //-                       span.comments-list__text-name Сабанцев Владимир
+  //-                       span.comments-list__text-position — преподаватель
+  //-       .about-me__form
+  //-           .form-feedback
+  //-               form.form-feedback__elem(method='post' id='form-feedback')
+  //-                   .form-feedback__wrapper
+  //-                       .form-feedback__title
+  //-                           h2.block-subtitle.form-feedback__title-text СВЯЗАТЬСЯ СО МНОЙ
+  //-                       .form-feedback__row-text
+  //-                           input.form-feedback__input-text(type='text' id='name' name='name' placeholder='Ваше имя')
+  //-                       .form-feedback__row-text
+  //-                           input.form-feedback__input-text(type='text' id='email' name='email' placeholder='Ваш email')
+  //-                       .form-feedback__row-text
+  //-                           textarea.form-feedback__input-text.form-feedback__input-text_textarea(type='textarea' id='message' name='message' placeholder='Ваше сообщение')
+  //-                   .form-feedback__row-btn
+  //-                       button.form-feedback__btn.form-feedback__btn_submit(type='submit') Отправить
+  //-                       button.form-feedback__btn.form-feedback__btn_reset(type='reset') Очистить
+  //-       .about-me__arrow-up
+  //-           a(href='#' class='about-me__arrow-link')
+  //-               svg.about-me__up-icon
+  //-                   use(xlink:href=require('../../images/icons/sprite.svg') + '#portf_arrow_up')

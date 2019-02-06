@@ -46,6 +46,12 @@ table {
   border-spacing: 0;
 }
 
+button {
+  background-color: transparent;
+  border:none;
+  padding:0;
+}
+
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
